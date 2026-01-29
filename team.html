@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Our Team | Sidhanta Roul</title>
+    <meta name="description" content="Meet the experts behind the agency. Sidhanta Roul (Strategy) and Roshan Panday (Tech) delivering high-end digital solutions.">
+    <meta name="keywords" content="Sidhanta Roul, Roshan Panday, Web Development Team, Business Strategy">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CORE VARIABLES
+           ========================================= */
+        :root {
+            --glass-black: #050505;
+            --accent: #ffb400; /* GOLD */
+            --border: #222;
+        }
+
+        body { background-color: #000; overflow-x: hidden; font-family: 'Montserrat', sans-serif; }
+
+        /* =========================================
+           FOOTER STYLES (MATCHING HOME PAGE)
+           ========================================= */
+        .system-footer {
+            background: #080808;
+            border-top: 1px solid var(--border);
+            padding: 60px 0 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-heading {
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .link-group a {
+            display: block;
+            color: #888;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .link-group a:hover { color: var(--accent); padding-left: 5px; }
+        .link-group i { width: 20px; color: var(--accent); }
+
+        /* =========================================
+           MOBILE FIXES (HEADER & FOOTER)
+           ========================================= */
+        @media (max-width: 900px) {
+            /* 1. FORCE HIDE HEADER BUTTON (Fixes the overlapping) */
+            .header-actions .btn-neon { 
+                display: none !important; 
+            }
+
+            /* 2. STACK FOOTER (Fixes the "horrible" look) */
+            .footer-grid {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .footer-brand, .footer-contact, .footer-log {
+                width: 100%;
+            }
+
+            .link-group a {
+                display: block;
+                padding: 10px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* =========================================
+           PAGE SPECIFIC STYLES (TEAM)
+           ========================================= */
+        
+        /* Grid Layout */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Card Design */
+        .project-card {
+            background: #080808;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 500px;
+            border-radius: 12px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(255, 180, 0, 0.15);
+        }
+
+        .card-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        /* PHOTO FIX (HEAD VISIBLE) */
+        .card-avatar {
+            width: 160px; 
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center; /* Focuses on Face */
+            border: 3px solid var(--accent);
+            margin-bottom: 25px;
+            box-shadow: 0 0 30px rgba(255, 180, 0, 0.15);
+            background: #111;
+        }
+
+        .card-title {
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-role {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .card-tech-row {
+            display: flex; 
+            gap: 8px; 
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tech-badge {
+            font-size: 0.7rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ccc;
+            padding: 5px 12px;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        .card-desc {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Footer Button */
+        .card-footer {
+            width: 100%;
+            padding: 20px;
+            background: var(--accent);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-family: 'Rajdhani', sans-serif;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        /* Modal Styles */
+        .project-panel-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); z-index: 99999;
+            display: none; justify-content: center; align-items: center;
+            padding: 20px;
+        }
+        .project-panel-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+        .project-panel {
+            width: 100%; max-width: 800px;
+            background: #0a0a0a; border: 1px solid var(--accent);
+            padding: 30px; position: relative;
+            max-height: 90vh; overflow-y: auto;
+        }
+        .btn-neon-modal {
+            background: var(--accent); color: black;
+            border: 1px solid var(--accent); padding: 12px 30px;
+            font-family: 'Rajdhani'; font-weight: 700;
+            text-decoration: none; display: inline-block;
+            text-align: center; cursor: pointer; width: 100%;
+        }
+
+        /* Mobile specific Card fixes */
+        @media (max-width: 900px) {
+            .team-grid { grid-template-columns: 1fr; gap: 40px; }
+            .project-card { min-height: auto; }
+            .nav-container { justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="neural-canvas"></canvas>
+    <div id="header-include"></div>
+
+    <section style="padding-top: 120px; padding-bottom: 80px;">
+        <div class="container">
+            
+            <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
+                <h1 style="font-size: 3rem; color:white; font-weight: 700; margin:0;">THE <span style="color:var(--accent);">CORE TEAM</span></h1>
+                <p style="color:#666; letter-spacing: 3px; margin-top: 10px; font-weight:600; font-size: 0.9rem;">STRATEGY MEETS TECHNOLOGY</p>
+            </div>
+            
+            <div class="team-grid">
+                
+                <div class="project-card" data-aos="fade-right" onclick="openTeamPanel(0)">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span>AGENCY LEAD</span>
+                            <i class="fas fa-crown" style="color:var(--accent);"></i>
+                        </div>
+                        
+                        <img src="assets/img/profile.jpg" class="card-avatar" alt="Sidhanta Roul">
+                        
+                        <h2 class="card-title">SIDHANTA ROUL</h2>
+                        <div class="card-role">BUSINESS STRATEGIST</div>
+                        
+                        <div class="card-tech-row">
+                            <span class="tech-badge">Strategy</span>
+                            <span class="tech-badge">Sales</span>
+                            <span class="tech-badge">Mgmt</span>
+                        </div>
+                        <p class="card-desc">
+                            The bridge between client goals and technical execution. Ensuring your project is delivered on time, within budget, and profitable.
+                        </p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        VIEW FULL PROFILE <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-left" onclick="openTeamPanel(1)">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span>TECH LEAD</span>
+                            <i class="fas fa-code" style="color:var(--accent);"></i>
+                        </div>
+                        
+                        <img src="https://github.com/roshan-panday.png" class="card-avatar" alt="Roshan Panday">
+                        
+                        <h2 class="card-title">ROSHAN PANDAY</h2>
+                        <div class="card-role">SYSTEM ARCHITECT</div>
+                        
+                        <div class="card-tech-row">
+                            <span class="tech-badge">Full Stack</span>
+                            <span class="tech-badge">AI</span>
+                            <span class="tech-badge">Security</span>
+                        </div>
+                        <p class="card-desc">
+                            The technical powerhouse. Architecting high-performance, secure, and scalable digital solutions that drive the agency's backend.
+                        </p>
+                    </div>
+
+                    <div class="card-footer">
+                        VIEW FULL PROFILE <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-include"></div>
+
+    <div id="projectPanelOverlay" class="project-panel-overlay">
+        <div class="project-panel">
+            <span class="close-panel" onclick="closeTeamPanel()" style="position:absolute; top:20px; right:20px; color:white; font-size:2rem; cursor:pointer;">&times;</span>
+            
+            <div class="panel-header" style="border-bottom:1px solid #333; padding-bottom:20px; margin-bottom:20px;">
+                <h2 class="panel-title" id="t-name" style="color:white; font-size:2rem; margin:0; font-family:'Rajdhani';">NAME</h2>
+                <div class="panel-subtitle" id="t-role" style="color:var(--accent); font-weight:bold; letter-spacing:2px;">ROLE</div>
+            </div>
+
+            <div class="panel-grid" style="display:grid; grid-template-columns:1fr; gap:30px;">
+                <div>
+                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">PROFESSIONAL BACKGROUND</div>
+                    <p class="panel-text" id="t-bio" style="color:#ccc; line-height:1.6; margin-bottom:20px;">...</p>
+                    
+                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">CORE EXPERTISE</div>
+                    <p class="panel-text" id="t-skills" style="color:white;">...</p>
+                </div>
+                <div>
+                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">KEY RESPONSIBILITIES</div>
+                    <ul class="feature-list" id="t-responsibilities" style="list-style:none; padding:0; color:#aaa;"></ul>
+                </div>
+            </div>
+
+            <div class="panel-actions" style="margin-top:30px; display:flex; flex-direction:column; gap:10px;">
+                <a href="#" target="_blank" class="btn-neon-modal" id="t-link">VISIT PORTFOLIO</a>
+                <button class="btn-neon-modal" onclick="closeTeamPanel()" style="background:transparent; border-color:#444; color:#888;">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        const teamData = [
+            {
+                name: "SIDHANTA ROUL",
+                role: "BUSINESS STRATEGIST & FOUNDER",
+                bio: "Sidhanta specializes in the 'Human' side of technology. With a focus on Business Administration and Client Relations, he ensures that every line of code we write translates into revenue for our clients.",
+                skills: "Agile Management • Sales Strategy • UI/UX Direction",
+                responsibilities: [
+                    "Client Communication & Sales",
+                    "Project Roadmap Planning",
+                    "Quality Assurance (QA)",
+                    "Budget & Resource Management"
+                ],
+                link: "index.html",
+                linkText: "VISIT AGENCY HOME"
+            },
+            {
+                name: "ROSHAN PANDAY",
+                role: "LEAD SYSTEM ARCHITECT",
+                bio: "The engine behind the agency. Roshan is a Full-Stack expert and MCA graduate who builds the heavy-lifting technology. From complex AI integrations to secure banking systems.",
+                skills: "PHP/Laravel • React/Node.js • Python AI • Cyber Security",
+                responsibilities: [
+                    "Full-Stack Development",
+                    "Server Architecture & Security",
+                    "Database Design",
+                    "API Integration"
+                ],
+                link: "https://roshan-panday.github.io/portfolio-website/",
+                linkText: "VISIT TECH PORTFOLIO"
+            }
+        ];
+
+        function openTeamPanel(index) {
+            const data = teamData[index];
+            document.getElementById('t-name').innerText = data.name;
+            document.getElementById('t-role').innerText = data.role;
+            document.getElementById('t-bio').innerText = data.bio;
+            document.getElementById('t-skills').innerText = data.skills;
+            
+            const list = document.getElementById('t-responsibilities');
+            list.innerHTML = '';
+            data.responsibilities.forEach(item => {
+                let li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check" style="color:var(--accent); margin-right:10px;"></i> ${item}`;
+                li.style.marginBottom = "10px";
+                list.appendChild(li);
+            });
+
+            const btn = document.getElementById('t-link');
+            btn.href = data.link;
+            btn.innerHTML = data.linkText + ' <i class="fas fa-external-link-alt"></i>';
+
+            document.getElementById('projectPanelOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTeamPanel() {
+            document.getElementById('projectPanelOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('projectPanelOverlay').addEventListener('click', function(e) {
+            if (e.target === this) closeTeamPanel();
+        });
+
+        window.onload = function() { AOS.init(); }
+    </script>
+
+</body>
+</html>
