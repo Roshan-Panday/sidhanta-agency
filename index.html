@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Sidhanta Roul | Business Strategist</title>
-    
-    <meta name="description" content="Sidhanta Roul - Business Strategist & Digital Consultant. Bridging the gap between business goals and technical execution.">
-    <meta name="keywords" content="Sidhanta Roul, Business Strategist, Web Development, Digital Marketing, Project Management">
+    <title>Sidhanta Roul | AI Architect</title>
+    <meta name="description" content="Portfolio of Sidhanta Roul - Full Stack AI Architect and System Engineer. Building offline AI networks and digital ecosystems.">
+    <meta name="keywords" content="Sidhanta Roul, Full Stack Developer, AI Architect, Web Development, System Design">
     <meta name="author" content="Sidhanta Roul">
-    <meta property="og:title" content="Sidhanta Roul | Business Strategist">
+    <meta property="og:title" content="Sidhanta Roul | AI & Web Architect">
     <meta property="og:image" content="assets/img/profile.jpg">
     
     <link rel="stylesheet" href="assets/css/style.css">
@@ -19,18 +18,18 @@
     
     <style>
         /* =========================================
-           CORE VARIABLES
+           CORE VARIABLES (ORIGINAL GOLD THEME)
            ========================================= */
         :root {
             --glass-black: #050505;
-            --accent: #ffb400; /* Gold */
+            --accent: #ffb400; /* ORIGINAL GOLD */
             --border: #222;
         }
 
         body { background-color: #000; overflow-x: hidden; font-family: 'Montserrat', sans-serif; }
 
         /* =========================================
-           FOOTER FIXES (The "Horrible" Fix)
+           FOOTER & MOBILE FIXES (PRESERVED)
            ========================================= */
         .system-footer {
             background: #080808;
@@ -41,7 +40,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr; /* Desktop: 3 Columns */
+            grid-template-columns: 1.5fr 1fr 1fr;
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
@@ -68,32 +67,16 @@
         .link-group a:hover { color: var(--accent); padding-left: 5px; }
         .link-group i { width: 20px; color: var(--accent); }
 
-        /* =========================================
-           MOBILE FOOTER FIX (CRITICAL)
-           ========================================= */
         @media (max-width: 900px) {
             .footer-grid {
-                display: flex !important;       /* Stop using Grid on mobile */
-                flex-direction: column;         /* Stack items vertically */
-                text-align: center;             /* Center align everything */
-                gap: 50px;                      /* Add space between sections */
-            }
-
-            .footer-brand, .footer-contact, .footer-log {
-                width: 100%;                    /* Full width */
-                display: flex;
+                display: flex !important;
                 flex-direction: column;
-                align-items: center;            /* Center items */
+                text-align: center;
+                gap: 50px;
             }
-
-            .link-group a {
-                display: inline-block;          /* Better touch targets */
-                margin-bottom: 15px;
-                padding: 5px 10px;
-                background: rgba(255,255,255,0.05);
-                border-radius: 4px;
-                width: 100%;
-            }
+            .footer-brand, .footer-contact, .footer-log { width: 100%; display: flex; flex-direction: column; align-items: center; }
+            .link-group a { display: inline-block; margin-bottom: 15px; padding: 5px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; width: 100%; }
+            #header-include .header-actions .btn-neon { display: none !important; }
         }
 
         /* =========================================
@@ -121,7 +104,6 @@
         .hero-content { flex: 1; text-align: left; z-index: 2; }
         .hero-visual { flex: 1; display: flex; justify-content: center; position: relative; z-index: 2; }
 
-        /* Profile Image */
         .profile-wrapper { position: relative; width: 400px; height: 400px; display: flex; align-items: center; justify-content: center; }
         .profile-glow {
             position: absolute; width: 100%; height: 100%; border-radius: 50%;
@@ -135,16 +117,13 @@
 
         .decrypt-text { font-family: 'Rajdhani', sans-serif; color: var(--accent); font-weight: 700; letter-spacing: 2px; }
 
-        /* Stats */
         .stat-hud { display: flex; gap: 50px; margin-top: 50px; border-top: 1px solid #222; padding-top: 25px; width: fit-content; }
 
-        /* Marquee */
         .tech-marquee-container {
             width: 100%; background: #080808; border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 30px 0; overflow: hidden; white-space: nowrap; position: relative; z-index: 5;
         }
 
-        /* Nexus Cards */
         .nexus-section { padding: 100px 0; }
         .nexus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
         .nexus-card {
@@ -156,35 +135,19 @@
         .nexus-card h3 { color: white; font-size: 1.5rem; margin-bottom: 15px; font-family: 'Rajdhani'; letter-spacing: 1px; }
         .nexus-card p { color: #888; font-size: 0.95rem; line-height: 1.6; }
 
-        /* =========================================
-           MOBILE OPTIMIZATIONS (GENERAL)
-           ========================================= */
         @media (max-width: 900px) {
-            /* Hero Stack */
             .hero-section { padding-top: 100px; padding-bottom: 40px; min-height: auto; }
             .hero-layout { flex-direction: column-reverse; text-align: center; gap: 40px; }
-            
             .hero-content { width: 100%; padding: 0 15px; }
             .hero-visual { width: 100%; margin-bottom: 10px; }
             .profile-wrapper { width: 260px; height: 260px; }
-            
-            /* Typography */
             h1 { font-size: 3rem !important; line-height: 1.1; }
-            
-            /* Buttons */
             .hero-btns { justify-content: center; width: 100%; flex-wrap: wrap; }
             .btn-neon { width: 100%; text-align: center; }
             .hero-socials { justify-content: center; }
-            
-            /* Stats */
             .stat-hud { justify-content: center; width: 100% !important; flex-wrap: wrap; gap: 30px !important; border-top: none !important; }
-            
-            /* Services Grid */
             .nexus-grid { grid-template-columns: 1fr; }
             .nexus-card { padding: 30px; text-align: left; }
-
-            /* Force Hide Header Button */
-            #header-include .header-actions .btn-neon { display: none !important; }
         }
 
         @keyframes radar-spin { 100% { transform: rotate(360deg); } }
@@ -202,7 +165,7 @@
             <div class="hero-content" data-aos="fade-right">
                 <div style="margin-bottom: 25px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid #333; padding: 8px 18px; border-radius: 30px; background: rgba(255,255,255,0.03);">
                     <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent);"></span>
-                    <span style="color: #888; font-size: 0.8rem; letter-spacing: 2px; font-weight: 700;">AGENCY ONLINE</span>
+                    <span style="color: #888; font-size: 0.8rem; letter-spacing: 2px; font-weight: 700;">SYSTEM ONLINE</span>
                 </div>
                 
                 <h1 style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 15px; color:white; font-weight: 800; letter-spacing: -1px;">
@@ -210,27 +173,28 @@
                 </h1>
                 
                 <h2 style="font-size: 1.5rem; color:#888; font-family:'Rajdhani', sans-serif; margin-bottom: 30px;">
-                    ROLE: <span class="decrypt-text" id="decrypt-target">LOADING...</span>
+                    ROLE: <span class="decrypt-text" id="decrypt-target">AI ARCHITECT...</span>
                 </h2>
                 
                 <p style="color: #bbb; max-width: 550px; margin-bottom: 35px; line-height: 1.7; font-size: 1.1rem;">
-                    BBA Graduate & Business Strategist. I bridge the gap between <strong>Business Goals</strong> and <strong>Technical Execution</strong>. While I manage the strategy, clients, and operations, my technical partners build the future.
+                    Full Stack AI Architect & MBA Graduate. I bridge the gap between <strong>Heavy Backend Logic</strong> and <strong>Modern Web Systems</strong>. Building robust offline AI networks, secure banking protocols, and digital ecosystems for enterprise clients.
                 </p>
 
                 <div class="hero-socials" style="display: flex; gap: 30px; margin-bottom: 35px;">
                     <a href="https://wa.me/919658060664" target="_blank" style="color:#666; font-size:2rem; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#666'"><i class="fab fa-whatsapp"></i></a>
                     <a href="mailto:sidhantaroul67@gmail.com" style="color:#666; font-size:2rem; transition:0.2s;" onmouseover="this.style.color='#EA4335'" onmouseout="this.style.color='#666'"><i class="fas fa-envelope"></i></a>
+                    <a href="#" style="color:#666; font-size:2rem; transition:0.2s;" onmouseover="this.style.color='#0077B5'" onmouseout="this.style.color='#666'"><i class="fab fa-linkedin"></i></a>
                 </div>
                 
                 <div class="hero-btns" style="display:flex; gap:15px;">
-                    <a href="projects.html" class="btn-neon" style="border: 1px solid var(--accent); color:var(--accent); padding:15px 30px; font-weight:bold; text-decoration:none; display:inline-block;">VIEW OUR WORK</a>
-                    <a href="tel:+919658060664" class="btn-neon" style="border: 1px solid #444; color:#ccc; padding:15px 30px; font-weight:bold; text-decoration:none; display:inline-block;">BOOK A CALL</a>
+                    <a href="projects.html" class="btn-neon" style="border: 1px solid var(--accent); color:var(--accent); padding:15px 30px; font-weight:bold; text-decoration:none; display:inline-block;">VIEW ARCHITECTURE</a>
+                    <a href="tel:+919658060664" class="btn-neon" style="border: 1px solid #444; color:#ccc; padding:15px 30px; font-weight:bold; text-decoration:none; display:inline-block;">DEPLOY PROJECT</a>
                 </div>
 
                 <div class="stat-hud">
-                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">BBA</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">GRADUATE</p></div>
-                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">100%</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">CLIENT SUPPORT</p></div>
-                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">24/7</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">AVAILABILITY</p></div>
+                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">MBA</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">+ AI CORE</p></div>
+                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">100%</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">UPTIME</p></div>
+                    <div><h3 style="color:white; font-size: 1.8rem; margin:0; font-family:'Rajdhani';">FULL</h3><p style="color:#666; font-size:0.75rem; font-weight:700; letter-spacing:1px;">STACK DEV</p></div>
                 </div>
             </div>
 
@@ -245,17 +209,17 @@
 
     <div class="tech-marquee-container">
         <div class="tech-track" style="display: inline-block; animation: scroll-left 40s linear infinite;">
-            <i class="fas fa-chart-line" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-bullhorn" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-handshake" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fab fa-google" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-search-dollar" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fab fa-whatsapp" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-tasks" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-chart-line" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-bullhorn" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fas fa-handshake" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
-            <i class="fab fa-google" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-code" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-server" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-database" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fab fa-python" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-microchip" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fab fa-react" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-robot" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-code" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-server" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fas fa-database" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
+            <i class="fab fa-python" style="margin:0 40px; color:#333; font-size:2.5rem;"></i>
         </div>
     </div>
 
@@ -263,32 +227,32 @@
         <div class="container">
             <div style="display:flex; justify-content:space-between; align-items:end; margin-bottom: 30px; flex-wrap:wrap; gap:10px;">
                 <div>
-                    <h2 style="font-size: 2.5rem; color:white; margin:0; font-family:'Rajdhani', sans-serif;">GROWTH <span style="color:var(--accent);">NEXUS</span></h2>
-                    <p style="color:#666; margin-top:5px; letter-spacing:1px;">STRATEGIC BUSINESS SOLUTIONS</p>
+                    <h2 style="font-size: 2.5rem; color:white; margin:0; font-family:'Rajdhani', sans-serif;">TECH <span style="color:var(--accent);">STACK</span></h2>
+                    <p style="color:#666; margin-top:5px; letter-spacing:1px;">ADVANCED DIGITAL SOLUTIONS</p>
                 </div>
-                <a href="services.html" class="btn-neon" style="border:1px solid var(--accent); color:var(--accent); padding:10px 25px; text-decoration:none; font-weight:bold;">VIEW ALL SERVICES</a>
+                <a href="services.html" class="btn-neon" style="border:1px solid var(--accent); color:var(--accent); padding:10px 25px; text-decoration:none; font-weight:bold;">VIEW ALL MODULES</a>
             </div>
             
             <div class="nexus-grid" data-aos="fade-up">
                 <div class="nexus-card" onclick="window.location.href='services.html'">
-                    <i class="fas fa-chess-knight nexus-icon"></i>
-                    <h3>DIGITAL STRATEGY</h3>
-                    <p>Comprehensive planning to take your business online. From market analysis to conversion optimization.</p>
-                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Available</div>
+                    <i class="fas fa-robot nexus-icon"></i>
+                    <h3>AI INTEGRATION</h3>
+                    <p>Deploying offline LLMs and neural networks for privacy-focused business automation.</p>
+                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Online</div>
                 </div>
 
                 <div class="nexus-card" onclick="window.location.href='services.html'">
-                    <i class="fas fa-users-cog nexus-icon" style="color:white;"></i>
-                    <h3>PROJECT MANAGEMENT</h3>
-                    <p>I handle the timeline, the dev team, and the quality assurance, so you don't have to worry about the tech.</p>
-                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Available</div>
+                    <i class="fas fa-layer-group nexus-icon" style="color:white;"></i>
+                    <h3>WEB ARCHITECTURE</h3>
+                    <p>Full-stack development using modern frameworks (React, Node) for scalable performance.</p>
+                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Online</div>
                 </div>
 
                 <div class="nexus-card" onclick="window.location.href='services.html'">
-                    <i class="fas fa-headset nexus-icon" style="color:var(--accent);"></i>
-                    <h3>CLIENT SUPPORT</h3>
-                    <p>24/7 dedicated support to ensure your digital ecosystem runs smoothly. Direct WhatsApp access.</p>
-                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Available</div>
+                    <i class="fas fa-shield-alt nexus-icon" style="color:var(--accent);"></i>
+                    <h3>SECURE BACKEND</h3>
+                    <p>Banking-grade security protocols ensuring data integrity and zero-latency transactions.</p>
+                    <div style="margin-top:20px; font-size:0.8rem; color:#555; font-weight:bold; text-transform:uppercase; letter-spacing:1px;">Status: Online</div>
                 </div>
             </div>
         </div>
@@ -301,8 +265,8 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        // TYPEWRITER
-        const roles = ["BUSINESS STRATEGIST", "PROJECT MANAGER", "DIGITAL CONSULTANT", "CLIENT LEAD"];
+        // TYPEWRITER - UPDATED ROLES
+        const roles = ["FULL STACK DEVELOPER", "AI ARCHITECT", "SYSTEM ENGINEER", "WEB SPECIALIST"];
         const el = document.getElementById("decrypt-target");
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
         let roleIndex = 0;
