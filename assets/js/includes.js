@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // --- 2. GENERATE SYSTEM FOOTER ---
+    // --- 2. GENERATE SYSTEM FOOTER (UPDATED TITLE) ---
     const footerElement = document.getElementById("footer-include");
     if (footerElement) {
         footerElement.innerHTML = `
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h3 class="footer-heading">LEGAL & CREDITS</h3>
                         <p style="color:#888; font-size: 0.85rem; line-height: 1.6;">
                             &copy; 2026 SIDHANTA ROUL<br>
-                            BUSINESS STRATEGIST // BBA<br>
+                            FULL STACK AI ARCHITECT // MBA<br>
                             BHUBANESWAR, INDIA
                         </p>
                         <p style="margin-top:10px; font-size: 0.8rem; color:#555;">
