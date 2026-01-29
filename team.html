@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Our Team | Sidhanta Roul</title>
-    <meta name="description" content="Meet the experts behind the agency. Sidhanta Roul (Strategy) and Roshan Panday (Tech) delivering high-end digital solutions.">
-    <meta name="keywords" content="Sidhanta Roul, Roshan Panday, Web Development Team, Business Strategy">
+    <title>Core Team | Sidhanta Agency</title>
+    <meta name="description" content="Meet the technical leadership. Sidhanta Roul (AI Architect) and Roshan Panday (System Architect).">
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,7 +14,7 @@
 
     <style>
         /* =========================================
-           CORE VARIABLES
+           1. CORE VARIABLES (GOLD THEME)
            ========================================= */
         :root {
             --glass-black: #050505;
@@ -26,7 +25,7 @@
         body { background-color: #000; overflow-x: hidden; font-family: 'Montserrat', sans-serif; }
 
         /* =========================================
-           FOOTER STYLES (MATCHING HOME PAGE)
+           2. FOOTER & HEADER FIXES
            ========================================= */
         .system-footer {
             background: #080808;
@@ -45,61 +44,29 @@
         }
 
         .footer-heading {
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            color: white; font-family: 'Rajdhani', sans-serif; font-weight: 700;
+            letter-spacing: 1px; margin-bottom: 20px; font-size: 1.1rem;
         }
 
         .link-group a {
-            display: block;
-            color: #888;
-            text-decoration: none;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            transition: 0.3s;
+            display: block; color: #888; text-decoration: none; margin-bottom: 12px;
+            font-size: 0.9rem; transition: 0.3s;
         }
         .link-group a:hover { color: var(--accent); padding-left: 5px; }
-        .link-group i { width: 20px; color: var(--accent); }
 
-        /* =========================================
-           MOBILE FIXES (HEADER & FOOTER)
-           ========================================= */
+        /* MOBILE FIXES */
         @media (max-width: 900px) {
-            /* 1. FORCE HIDE HEADER BUTTON (Fixes the overlapping) */
-            .header-actions .btn-neon { 
-                display: none !important; 
-            }
-
-            /* 2. STACK FOOTER (Fixes the "horrible" look) */
-            .footer-grid {
-                display: flex !important;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 50px;
-            }
-
-            .footer-brand, .footer-contact, .footer-log {
-                width: 100%;
-            }
-
-            .link-group a {
-                display: block;
-                padding: 10px;
-                background: rgba(255,255,255,0.05);
-                border-radius: 4px;
-                margin-bottom: 10px;
-            }
+            #header-include .header-actions .btn-neon { display: none !important; }
+            .footer-grid { display: flex !important; flex-direction: column; text-align: center; gap: 50px; }
+            .footer-brand, .footer-contact, .footer-log { width: 100%; }
+            .link-group a { display: block; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 4px; margin-bottom: 10px; }
+            .team-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+            .project-card { min-height: auto !important; }
         }
 
         /* =========================================
-           PAGE SPECIFIC STYLES (TEAM)
+           3. TEAM PAGE STYLES
            ========================================= */
-        
-        /* Grid Layout */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -109,7 +76,6 @@
             padding: 0 20px;
         }
 
-        /* Card Design */
         .project-card {
             background: #080808;
             border: 1px solid #222;
@@ -120,7 +86,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 500px;
+            min-height: 520px;
             border-radius: 12px;
         }
 
@@ -131,7 +97,7 @@
         }
 
         .card-content {
-            padding: 30px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -149,13 +115,11 @@
             letter-spacing: 2px;
         }
 
-        /* PHOTO FIX (HEAD VISIBLE) */
         .card-avatar {
-            width: 160px; 
-            height: 160px;
+            width: 160px; height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: top center; /* Focuses on Face */
+            object-position: top center;
             border: 3px solid var(--accent);
             margin-bottom: 25px;
             box-shadow: 0 0 30px rgba(255, 180, 0, 0.15);
@@ -165,7 +129,7 @@
         .card-title {
             color: white;
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -182,29 +146,20 @@
         }
 
         .card-tech-row {
-            display: flex; 
-            gap: 8px; 
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
+            display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;
         }
 
         .tech-badge {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             background: rgba(255, 255, 255, 0.05);
             color: #ccc;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 4px;
             border: 1px solid #333;
         }
 
-        .card-desc {
-            color: #888;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
+        .card-desc { color: #888; font-size: 0.95rem; line-height: 1.6; }
 
-        /* Footer Button */
         .card-footer {
             width: 100%;
             padding: 20px;
@@ -220,8 +175,9 @@
             font-size: 1rem;
             transition: 0.3s;
         }
+        .card-footer:hover { background: white; }
 
-        /* Modal Styles */
+        /* MODAL */
         .project-panel-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.95); z-index: 99999;
@@ -232,7 +188,7 @@
         .project-panel {
             width: 100%; max-width: 800px;
             background: #0a0a0a; border: 1px solid var(--accent);
-            padding: 30px; position: relative;
+            padding: 35px; position: relative;
             max-height: 90vh; overflow-y: auto;
         }
         .btn-neon-modal {
@@ -241,13 +197,6 @@
             font-family: 'Rajdhani'; font-weight: 700;
             text-decoration: none; display: inline-block;
             text-align: center; cursor: pointer; width: 100%;
-        }
-
-        /* Mobile specific Card fixes */
-        @media (max-width: 900px) {
-            .team-grid { grid-template-columns: 1fr; gap: 40px; }
-            .project-card { min-height: auto; }
-            .nav-container { justify-content: space-between; }
         }
     </style>
 </head>
@@ -261,7 +210,7 @@
             
             <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
                 <h1 style="font-size: 3rem; color:white; font-weight: 700; margin:0;">THE <span style="color:var(--accent);">CORE TEAM</span></h1>
-                <p style="color:#666; letter-spacing: 3px; margin-top: 10px; font-weight:600; font-size: 0.9rem;">STRATEGY MEETS TECHNOLOGY</p>
+                <p style="color:#666; letter-spacing: 3px; margin-top: 10px; font-weight:600; font-size: 0.9rem;">TECHNICAL ARCHITECTURE LEADERSHIP</p>
             </div>
             
             <div class="team-grid">
@@ -273,23 +222,23 @@
                             <i class="fas fa-crown" style="color:var(--accent);"></i>
                         </div>
                         
-                        <img src="assets/img/profile.jpg" class="card-avatar" alt="Sidhanta Roul">
+                        <img src="assets/img/profile.jpg" class="card-avatar" alt="Sidhanta Roul" onerror="this.src='https://ui-avatars.com/api/?name=Sidhanta+Roul&background=ffb400&color=000&size=200'">
                         
                         <h2 class="card-title">SIDHANTA ROUL</h2>
-                        <div class="card-role">BUSINESS STRATEGIST</div>
+                        <div class="card-role">FULL STACK AI ARCHITECT</div>
                         
                         <div class="card-tech-row">
-                            <span class="tech-badge">Strategy</span>
-                            <span class="tech-badge">Sales</span>
-                            <span class="tech-badge">Mgmt</span>
+                            <span class="tech-badge">AI Core</span>
+                            <span class="tech-badge">Full Stack</span>
+                            <span class="tech-badge">Systems</span>
                         </div>
                         <p class="card-desc">
-                            The bridge between client goals and technical execution. Ensuring your project is delivered on time, within budget, and profitable.
+                            MBA Graduate & Lead Architect. Bridging heavy backend logic with modern web systems to build robust offline AI networks.
                         </p>
                     </div>
                     
                     <div class="card-footer">
-                        VIEW FULL PROFILE <i class="fas fa-chevron-right"></i>
+                        VIEW TECHNICAL DATA <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
 
@@ -316,7 +265,7 @@
                     </div>
 
                     <div class="card-footer">
-                        VIEW FULL PROFILE <i class="fas fa-chevron-right"></i>
+                        VIEW TECHNICAL DATA <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
 
@@ -337,14 +286,14 @@
 
             <div class="panel-grid" style="display:grid; grid-template-columns:1fr; gap:30px;">
                 <div>
-                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">PROFESSIONAL BACKGROUND</div>
+                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">TECHNICAL BACKGROUND</div>
                     <p class="panel-text" id="t-bio" style="color:#ccc; line-height:1.6; margin-bottom:20px;">...</p>
                     
                     <div style="color:#666; font-weight:bold; margin-bottom:10px;">CORE EXPERTISE</div>
                     <p class="panel-text" id="t-skills" style="color:white;">...</p>
                 </div>
                 <div>
-                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">KEY RESPONSIBILITIES</div>
+                    <div style="color:#666; font-weight:bold; margin-bottom:10px;">KEY ARCHITECTURE</div>
                     <ul class="feature-list" id="t-responsibilities" style="list-style:none; padding:0; color:#aaa;"></ul>
                 </div>
             </div>
@@ -364,17 +313,17 @@
         const teamData = [
             {
                 name: "SIDHANTA ROUL",
-                role: "BUSINESS STRATEGIST & FOUNDER",
-                bio: "Sidhanta specializes in the 'Human' side of technology. With a focus on Business Administration and Client Relations, he ensures that every line of code we write translates into revenue for our clients.",
-                skills: "Agile Management • Sales Strategy • UI/UX Direction",
+                role: "FULL STACK AI ARCHITECT",
+                bio: "MBA Graduate & Lead System Architect. Sidhanta bridges the gap between heavy backend logic and modern web systems. He specializes in building robust offline AI networks, secure banking protocols, and digital ecosystems.",
+                skills: "Python/AI • MERN Stack • Cloud Architecture",
                 responsibilities: [
-                    "Client Communication & Sales",
-                    "Project Roadmap Planning",
-                    "Quality Assurance (QA)",
-                    "Budget & Resource Management"
+                    "System Architecture Design",
+                    "AI Model Integration",
+                    "Backend Security Protocols",
+                    "Technical Roadmap Planning"
                 ],
                 link: "index.html",
-                linkText: "VISIT AGENCY HOME"
+                linkText: "VISIT ARCHITECTURE"
             },
             {
                 name: "ROSHAN PANDAY",
