@@ -78,9 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             FULL STACK AI ARCHITECT // MBA<br>
                             BHUBANESWAR, INDIA
                         </p>
-                        <p style="margin-top:10px; font-size: 0.8rem; color:#555;">
-                            Tech Architecture by <a href="https://roshan-panday.github.io/portfolio-website/" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">RP_DEV</a>
-                        </p>
+                       
                     </div>
 
                 </div>
