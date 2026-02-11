@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <header class="glass-nav-wrapper">
                 <nav class="glass-nav">
                     <div class="nav-container">
-                        <a href="index.html" class="logo">SID<span style="color:var(--accent);">HANTA</span></a>
+                        <a href="index.html" class="logo">Ignite<span style="color:var(--accent);">SIRO</span></a>
                         
                         <ul class="nav-links">
                             <li><a href="index.html">HOME</a></li>
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="container footer-grid">
                     
                     <div class="footer-brand">
-                        <h2 class="logo" style="font-size: 1.5rem;">SR<span style="color:var(--accent);">_AGENCY</span></h2>
+                        <h2 class="logo" style="font-size: 1.5rem;">IGNITE<span style="color:var(--accent);">SIRO</span></h2>
                         <p style="color: #666; margin-top: 15px; font-size: 0.9rem;">
                             <span style="height:8px; width:8px; background:var(--accent); border-radius:50%; display:inline-block; margin-right:5px; box-shadow:0 0 5px var(--accent);"></span>
                             OPEN FOR BUSINESS
